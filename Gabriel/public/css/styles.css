@@ -1,0 +1,129 @@
+body{
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.navbar-nav {
+    display: flex;
+    width: 100%;
+}
+.navbar-nav .ml-lg-auto {
+    margin-left: auto;
+}
+.row-division{
+    padding: 50px;
+}
+.row-division-2{
+    border-bottom: 1px solid #ccc;
+    background-color: #ccc;
+}
+
+.space{
+    margin-bottom: 70px;
+}
+.small-space{
+    margin-bottom: 40px;
+}
+
+.h1-higher{
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.image-index{
+    width: 60%;
+}
+
+.image-code {
+    height: 100%;
+    min-height: 300px; /* Ajuste a altura mínima conforme necessário */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.form-contact{
+    text-align: left;
+}
+
+.form-contact input{
+    margin-bottom: 5px;
+}
+
+.form-contact button{
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.skill-header {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skill-section {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.skill-section p, .topic{
+    padding-left: 10px;
+}
+
+.skill-list li {
+    margin-bottom: 10px;
+}
+
+.language-list li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.light-strong{
+    font-weight: 500;
+}
+
+.link{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.linkedin{
+    color: #0e76a8;
+}
+
+.linkedin:hover{
+    color: #083a52;
+}
+
+.whatsapp{
+    color: #25D366;
+}
+
+.whatsapp:hover{
+    color: #075E54;
+}
+
+.instagram{
+    color: #C13584;
+}
+
+.instagram:hover{
+    color: #5B51D8;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    width: 100%;
+    color: #FFFFFF !important;
+    position: relative;
+}
