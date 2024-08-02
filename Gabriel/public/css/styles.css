@@ -127,3 +127,10 @@ footer {
     color: #FFFFFF !important;
     position: relative;
 }
+
+
+@media (max-width: 600px) {
+    .image-code, .img-none-smart{
+        display: none;
+    }
+}

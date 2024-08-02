@@ -16,9 +16,9 @@
         <p class="h1-higher space">SOBRE MIM</p>
         <p class="space">Bem-vindo ao meu site currículo! Eu criei esse cantinho virtual para te mostrar um pouco da minha jornada nessa maluquice que é a programação.
             Se quiser saber um pouqinho mais sobre os perrengues e as aventuras que já passei nesse mundo, dá um clique nesse botão aí embaixo que eu te conto!</p>
-        <a class="btn btn-dark"><i class="fas fa-angle-right"></i> SAIBA MAIS <i class="fas fa-angle-left"></i></a>
+        <a class="btn btn-dark" href="{{ route('about') }}"><i class="fas fa-angle-right"></i> SAIBA MAIS <i class="fas fa-angle-left"></i></a>
     </div>
-    <div class="col-md-5 text-center">
+    <div class="col-md-5 img-none-smart text-center">
         <img src="{{ asset('storage/5.jpeg') }}" class="rounded-circle image-index" alt="Imagem Gabriel">
     </div>
 </div>
@@ -39,7 +39,7 @@
         <p class="space">Desde meus primeiros passos como estagiário até o meu cargo atual como supervisor de TI, a paixão pela programação e a vontade de evoluir sempre me motivaram a continuar estudando e crescendo na área. Com mais de 7 anos de experiência, já passei por várias fases, vivi muita coisa e sempre em constante evolução</p>
         <a class="btn btn-dark" href="{{ route('experiences') }}"><i class="fas fa-briefcase"></i> MINHAS EXPERIÊNCIAS </i></a>
     </div>
-    <div class="col-md-5 text-center">
+    <div class="col-md-5 img-none-smart text-center">
         <img src="{{ asset('storage/computer.jpg') }}" class="rounded-circle image-index" alt="Imagem Computador">
     </div>
 </div>
