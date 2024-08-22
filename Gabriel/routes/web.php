@@ -32,3 +32,15 @@ Route::get('/about', function () {
 Route::get('/contacts', function () {
     return view('contacts');
 })->name('contacts');
+
+Route::get('/sitemap.xml', function () {
+    $file = public_path('sitemap.xml');
+
+    if (File::exists($file)) {
+        return response()->file($file, [
+            'Content-Type' => 'application/xml',
+        ]);
+    }
+
+    abort(404);
+});
