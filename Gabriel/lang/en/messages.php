@@ -1,0 +1,132 @@
+<?php
+
+return [
+    'gabriel-complete-name' => 'Gabriel Oliveira de Paula',
+    'skills' => 'Skills',
+    'about' => 'About',
+    'experiences' => 'Experience',
+    'contacts' => 'Contacts',
+    'back-home' => 'Back to Home',
+    'hello' => 'HELLO, I\'M GABRIEL!',
+    'intro' => 'Nice to see you here! I\'m an IT supervisor with over 7 years of experience, and my passion is turning lines of code into amazing solutions. Currently, my main focus is PHP, but I\'m always exploring new technologies and ways to innovate.',
+    'about_me' => 'ABOUT ME',
+    'about_me_description' => 'Welcome to my resume website! I created this space to share a bit of my journey through the wild world of programming. If you want to hear about some of the challenges and adventures I\'ve been through, just click the button below and I\'ll tell you more!',
+
+    'know_more' => 'LEARN MORE',
+    'skills_upper' => 'SKILLS',
+    'skills_description' => 'With over 7 years of experience, I\'m a PHP developer who loves to explore different technologies. In addition to PHP, I\'m familiar with Laravel, MySQL, JavaScript, jQuery, Git, and many other cool tools.',
+    'know_skills' => 'Click here and I\'ll tell you all about them!',
+    'experiences_upper' => 'EXPERIENCE',
+    'experiences_description' => 'From my first steps as an intern to my current position as IT Supervisor, my passion for coding and desire to grow have always pushed me to keep learning and evolving. With over 7 years of experience, I\'ve been through many phases, lived a lot, and am constantly improving.',
+
+    'send_message' => 'SEND ME A MESSAGE',
+    'name' => 'Name:',
+    'name_placeholder' => 'Enter your name',
+    'email' => 'Email:',
+    'email_placeholder' => 'Enter your email',
+    'phone' => 'Phone:',
+    'phone_placeholder' => 'Enter your phone number',
+    'message' => 'Message:',
+    'message_placeholder' => 'Enter your message',
+    'send_email' => 'Send Message by Email',
+    'send_whatsapp' => 'Send Message via WhatsApp',
+
+    'first_of_all' => 'First of all',
+    'not_less_important' => 'Not less important',
+    'cant_forget' => 'And I can\'t forget',
+
+    'title' => 'Gabriel Oliveira - IT Supervisor | Experience in PHP and Laravel',
+    'meta_description' => 'Gabriel Oliveira is an IT Supervisor with over 7 years of experience, specializing in PHP and Laravel. Explore my website to learn more about my skills and background.',
+    'meta_keywords' => 'Gabriel Oliveira, IT Supervisor, PHP, Laravel, Programming, IT Experience',
+    'og_title' => 'Gabriel Oliveira - IT Supervisor | Experience in PHP and Laravel',
+    'og_description' => 'Learn more about Gabriel Oliveira, an IT Supervisor with over 7 years of experience in PHP and Laravel.',
+    'twitter_title' => 'Gabriel Oliveira - IT Supervisor | Experience in PHP and Laravel',
+    'twitter_description' => 'Learn more about Gabriel Oliveira, an IT Supervisor with over 7 years of experience in PHP and Laravel.',
+
+    'about_title' => 'About Me',
+    'about_p1' => 'In 2015, I took my first step into the exciting world of technology by enrolling in a degree in Information Systems. That\'s where I first discovered programming and realized I loved "talking to machines."',
+    'about_p2' => 'In college, the focus was all on Java. But in 2016, I discovered PHP and it was love at first sight! I entered the job market and haven’t stopped coding since. The simplicity and practicality of PHP won over my developer heart.',
+    'about_p3' => 'Along the way, I decided to give Java another chance and did a postgraduate degree. The idea was to move into the Java job market, but I was already so involved with PHP that I couldn’t let go. At least I gained a lot of knowledge in the process!',
+    'about_p4' => 'Today, I\'m a highly qualified professional with deep knowledge in development. I\'m always looking to learn more and grow every day. After all, in this field, you can’t afford to stand still!',
+
+    'image_code_alt' => 'Code Image',
+    'image_pc_alt' => 'PC Image',
+
+    'principles_title' => 'My Principles',
+    'principle_quality_title' => 'Quality',
+    'principle_quality_text' => 'I believe quality should be present in every step of development. From writing code to delivering the final product, my goal is always to ensure precision and excellence, resulting in robust and efficient solutions.',
+    'principle_innovation_title' => 'Innovation',
+    'principle_innovation_text' => 'I\'m always looking for new ideas and approaches to solve problems. I believe innovation is key to the growth and success of any project. I\'m committed to exploring new technologies and methodologies to create more effective and creative solutions.',
+    'principle_teamwork_title' => 'Collaboration and Teamwork',
+    'principle_teamwork_text' => 'Project success often depends on the ability to work well with others. I believe in the power of collaboration, clear communication, and diverse ideas to achieve high-quality and innovative results. I’m dedicated to building a positive and productive work environment.',
+
+    'contact_linkedin' => 'LinkedIn',
+    'contact_whatsapp' => 'WhatsApp',
+    'contact_instagram' => 'Instagram',
+
+    'experience_title' => 'Work Experience',
+    'experience_intro_1' => 'I began my programming journey in 2016, starting as an intern and working my way up to my current role as IT Supervisor.',
+    'experience_intro_2' => 'Throughout this path, I went through many experiences and gained a lot of knowledge. I’ve grown professionally and continue striving to improve my skills and keep learning every day.',
+
+    'webcontrol_position' => 'IT Supervisor - Web Control Empresas',
+    'webcontrol_period' => 'February 2022 to Present',
+    'webcontrol_previous_role' => 'Mid-Level PHP Developer – May 2021 to February 2022',
+    'webcontrol_description' => 'I am currently an IT Supervisor at Web Control Empresas. I started as a mid-level PHP developer, working as a Full Stack developer. The company offers an ERP system for small and medium-sized businesses, a complete system with POS, inventory control, orders, and many other features. Here, I expanded my experience with Laravel, creating various internal RESTful APIs and integrating fiscal modules for issuing and managing invoices (NFC, NFE, NFS). Besides sharpening my PHP skills, I worked on a large-scale system with both legacy and modern MVC-structured code.',
+    'webcontrol_sysadmin_tasks' => '- Linux server access, repository setup, and cron job creation and management',
+
+    'omnilink_position' => 'Junior Full Stack PHP Developer - Omnilink',
+    'omnilink_period' => 'August 2020 to May 2021',
+    'omnilink_description' => 'I worked at Omnilink maintaining software for tracking purposes. The company had won a bid to monitor detainees in the state of Paraná, and I helped the team with software maintenance and new tool implementation.',
+
+    'simplifica_position_jr' => 'Junior PHP Developer - Simplifica',
+    'simplifica_period_jr' => 'January 2019 to September 2020',
+    'simplifica_position_intern' => 'Intern - Simplifica',
+    'simplifica_period_intern' => 'July 2016 to December 2018',
+    'simplifica_description' => 'Simplifica was my first official IT job. I had many learning opportunities there and also improved my English a lot by contacting clients around the world. I decided to change jobs to gain new experiences. Unlike other companies I worked for, Simplifica didn’t have a widely marketed product — we handled various client-specific demands, which helped me explore multiple business areas. It was four years full of learning and great connections I still maintain.',
+
+    'tech_used' => 'Technologies Used',
+    'backend' => 'Backend:',
+    'frontend' => 'Frontend:',
+    'frameworks' => 'Frameworks:',
+    'database' => 'Database:',
+    'versioning' => 'Version Control:',
+    'system_admin' => 'System Administration',
+
+    'skills_title' => 'My Skills',
+    'skills_intro' => 'Throughout my career and studies, I’ve gained over seven years of experience in PHP, MySQL, and JavaScript/jQuery, strengthening my expertise in essential web development technologies. I also have solid knowledge in Java.',
+
+    'education_title' => 'Education',
+    'education_degree' => 'Bachelor\'s Degree:',
+    'education_degree_details' => 'Information Systems, Faculdades Santa Cruz, 2019',
+    'education_post' => 'Postgraduate:',
+    'education_post_details' => 'Java, Federal University of Technology – Paraná, 2021',
+
+    'main_skills_title' => 'Key Skills',
+    'main_skills_stack' => 'Fullstack PHP:',
+    'main_skills_description' => 'Strong expertise in PHP (Laravel), MySQL, and JavaScript (jQuery).',
+
+    'backend_title' => 'Back-end',
+    'backend_list_1' => 'PHP (5, 8), Laravel, CodeIgniter (2 and 3)',
+    'backend_list_2' => 'Java (JavaSE, JavaEE): RESTful Web Services (JAX-RS), Spring MVC, Spring Boot (Spring Data & Spring Security), Hibernate, Amazon S3, Vaadin, Vue, JSF, Apache Maven, Apache POI, Apache Tomcat, WildFly, and Payara',
+
+    'devops_title' => 'System Administration / DevOps',
+    'devops_list_1' => 'SSH access to CentOS and Ubuntu servers',
+    'devops_list_2' => 'Repository setup',
+    'devops_list_3' => 'Cron job creation and management',
+
+    'frontend_title' => 'Front-end',
+    'editor_title' => 'Code Editor',
+    'markup_title' => 'Markup Language',
+    'ide_title' => 'IDEs',
+
+    'database_title' => 'Database',
+    'version_control_title' => 'Version Control',
+    'api_testing_title' => 'API Testing Tool',
+    'agile_title' => 'Agile Methodologies',
+    'agile_tools' => 'UML Tools',
+
+    'languages_title' => 'Languages',
+    'language_english' => 'English: Advanced',
+    'language_spanish' => 'Spanish: Basic',
+    'language_french' => 'French: Basic',
+];
