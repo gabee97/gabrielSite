@@ -1,55 +1,65 @@
 @include('includes.head')
 @include('includes.header')
 
-<div class="row row-division row-division-2 align-items-center">
-    <div class="col-md-3 text-center"></div>
-    <div class="col-md-6 text-center">
-        <p class="h1-higher">@lang('messages.send_message')</p>
-        <form class="form-inline form-contact">
-            <label for="name">@lang('messages.name')</label>
-            <input type="text" class="form-control" placeholder="@lang('messages.name_placeholder')" id="name">
-            
-            <label for="email">@lang('messages.email')</label>
-            <input type="email" class="form-control" placeholder="@lang('messages.email_placeholder')" id="email">
-            
-            <label for="phone">@lang('messages.phone')</label>
-            <input type="text" class="form-control" placeholder="@lang('messages.phone_placeholder')" id="phone">
-            
-            <label for="message">@lang('messages.message')</label>
-            <textarea id="message" class="form-control" placeholder="@lang('messages.message_placeholder')"></textarea>
-            
-            <button type="submit" class="btn btn-secondary">
-                <i class="fas fa-envelope"></i> @lang('messages.send_email')
-            </button>
-            <button type="button" onclick="sendWhatsAppMessage()" class="btn btn-success">
-                <i class="fab fa-whatsapp"></i> @lang('messages.send_whatsapp')
-            </button>
-        </form>
+<main>
+<section class="page-hero">
+    <div class="container">
+        <p class="section-kicker">@lang('messages.contacts')</p>
+        <h1>@lang('messages.send_message')</h1>
     </div>
-    <div class="col-md-3 text-center"></div>
-</div>
+</section>
 
-<div class="row row-division row-division-2">
-    <div class="row">
-        <div class="col-md-3 text-center"></div>
-        <div class="col-md-6">
-            <div class="row">
-                <div class="col-sm-12 col-md-4">
-                    <h4><a class="link linkedin" href="https://www.linkedin.com/in/gabriel-oliveira-gop1997/" target="_blank">
-                        <i class="fab fa-linkedin"></i> @lang('messages.contact_linkedin')</a></h4>
+<section class="site-section">
+    <div class="container">
+        <div class="contact-card">
+            <form class="form-contact" action="{{ route('send.email') }}" method="POST">
+                @csrf
+                <label for="name">@lang('messages.name')</label>
+                <input type="text" name="name" class="form-control" placeholder="@lang('messages.name_placeholder')" id="name" required>
+            
+                <label for="email">@lang('messages.email')</label>
+                <input type="email" name="email" class="form-control" placeholder="@lang('messages.email_placeholder')" id="email" required>
+            
+                <label for="phone">@lang('messages.phone')</label>
+                <input type="text" name="phone" class="form-control" placeholder="@lang('messages.phone_placeholder')" id="phone">
+            
+                <label for="message">@lang('messages.message')</label>
+                <textarea id="message" name="message" class="form-control" placeholder="@lang('messages.message_placeholder')" required></textarea>
+            
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-dark">
+                        <i class="fas fa-envelope"></i> @lang('messages.send_email')
+                    </button>
+                    <button type="button" onclick="sendWhatsAppMessage(this)" class="btn btn-success" data-message-prefix="@lang('messages.whatsapp_message_prefix')">
+                        <i class="fab fa-whatsapp"></i> @lang('messages.send_whatsapp')
+                    </button>
                 </div>
-                <div class="col-sm-12 col-md-4">
-                    <h4><a class="link whatsapp" href="https://wa.me/+5541987694868?text=Olá Gabriel!%0AAchei seu perfil pelo seu site e gostaria de falar contigo" target="_blank">
-                        <i class="fab fa-whatsapp"></i> @lang('messages.contact_whatsapp')</a></h4>
-                </div>
-                <div class="col-sm-12 col-md-4">
-                    <h4><a class="link instagram" href="https://www.instagram.com/oliveiragabee_/" target="_blank">
-                        <i class="fab fa-instagram"></i> @lang('messages.contact_instagram')</a></h4>
-                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="site-section social-section">
+    <div class="container">
+        <div class="row g-3 justify-content-center">
+            <div class="col-sm-12 col-md-4">
+                <a class="social-card linkedin" href="https://www.linkedin.com/in/gabriel-oliveira-gop1997/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i> @lang('messages.contact_linkedin')
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <a class="social-card whatsapp" href="https://wa.me/+5541987694868?text=@lang('messages.contact_whatsapp_prefill')" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i> @lang('messages.contact_whatsapp')
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <a class="social-card instagram" href="https://www.instagram.com/oliveiragabee_/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i> @lang('messages.contact_instagram')
+                </a>
             </div>
         </div>
-        <div class="col-md-3 text-center"></div>
     </div>
-</div>
+</section>
+</main>
 
 @include('includes.footer')

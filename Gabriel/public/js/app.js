@@ -1,11 +1,10 @@
-function sendWhatsAppMessage(){
-    let message = document.getElementById('message').value;
-    let name = document.getElementById('name').value;
+function sendWhatsAppMessage(trigger) {
+    const message = document.getElementById('message').value.trim();
+    const name = document.getElementById('name').value.trim();
+    const prefix = trigger && trigger.dataset.messagePrefix ? trigger.dataset.messagePrefix : 'Me chamo';
 
-    let completeMessage = `Me chamo ${name}, ${message}`;
+    const completeMessage = `${prefix} ${name}, ${message}`;
+    const url = 'https://api.whatsapp.com/send?phone=5541987694868&text=' + encodeURIComponent(completeMessage);
 
-    let url = 'https://api.whatsapp.com/send?phone=5541987694868&text='+completeMessage;
-
-    window.open(url)
+    window.open(url, '_blank', 'noopener,noreferrer');
 }
-

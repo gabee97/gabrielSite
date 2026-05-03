@@ -1,66 +1,104 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Gabriel Oliveira - Currículo Online
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Site pessoal desenvolvido para apresentar um resumo profissional de Gabriel Oliveira de Paula, incluindo trajetória, habilidades técnicas, experiências, formação e canais de contato.
 
-## About Laravel
+O projeto funciona como currículo online e portfólio institucional, com suporte a português e inglês por meio da estrutura de internacionalização do Laravel.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Tecnologias
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- PHP 8
+- Laravel 9
+- Blade
+- Bootstrap 5
+- CSS customizado
+- JavaScript
+- Laravel Lang (`lang/pt_BR` e `lang/en`)
+- Vite, disponível na estrutura do projeto
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Funcionalidades
 
-## Learning Laravel
+- Página inicial com resumo profissional e chamada para experiências e contato.
+- Páginas dedicadas para habilidades, experiências, sobre e contatos.
+- Alternância de idioma entre português e inglês.
+- Formulário de contato com envio por e-mail.
+- Ação rápida para contato via WhatsApp.
+- Layout responsivo para mobile, tablet e desktop.
+- Metatags básicas de SEO e compartilhamento social.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Instalação
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Requisitos básicos:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- PHP 8.0.2 ou superior
+- Composer
+- Node.js e npm, caso queira usar o pipeline front-end
 
-## Laravel Sponsors
+Passos:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```bash
+composer install
+npm install
+cp .env.example .env
+php artisan key:generate
+php artisan storage:link
+```
 
-### Premium Partners
+Para rodar localmente:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+```bash
+php artisan serve
+```
 
-## Contributing
+Se for alterar assets gerenciados pelo Vite:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+npm run dev
+```
 
-## Code of Conduct
+## Estrutura Principal
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```text
+app/
+  Http/
+    Controllers/ContactController.php
+    Middleware/SetLocale.php
+lang/
+  en/messages.php
+  pt_BR/messages.php
+public/
+  css/styles.css
+  js/app.js
+resources/
+  views/
+    includes/
+    index.blade.php
+    about.blade.php
+    skills.blade.php
+    experiences.blade.php
+    contacts.blade.php
+routes/
+  web.php
+storage/
+  app/public/
+```
 
-## Security Vulnerabilities
+## Internacionalização
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Os textos do site ficam em:
 
-## License
+- `lang/pt_BR/messages.php`
+- `lang/en/messages.php`
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+As views utilizam `@lang('messages.chave')`, mantendo os textos traduzíveis e evitando conteúdo fixo diretamente no HTML/Blade.
+
+## Imagens
+
+O layout usa uma foto pessoal profissional por meio de `asset('storage/5.jpeg')`. Para que as imagens do diretório `storage/app/public` sejam servidas publicamente, execute:
+
+```bash
+php artisan storage:link
+```
+
+## Observações
+
+Este projeto é focado em apresentação profissional. Mudanças visuais devem preservar a clareza do conteúdo, a responsividade e a estrutura de idiomas existente.

@@ -22,10 +22,10 @@ class ContactController extends Controller
         // Envio do e-mail
         Mail::send('emails.contact', $data, function ($message) use ($data) {
             $message->to('gabrieloli123@gmail.com', 'Gabriel')
-                ->subject('Mensagem de gbr.dev.br');
+                ->subject(__('messages.contact_email_subject'));
             $message->from($data['email'], $data['name']);
         });
 
-        return back()->with('success', 'E-mail enviado com sucesso!');
+        return back()->with('success', __('messages.email_success'));
     }
 }

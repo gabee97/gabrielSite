@@ -1,119 +1,86 @@
 @include('includes.head')
 @include('includes.header')
 
-<div class="row text-white bg-dark row-division row-division-1">
-    <div class="col-md-3 text-center"></div>
-    <div class="col-md-6 text-center">
-        <h3 class="text-uppercase space">@lang('messages.experience_title')</h3>
+<main>
+<section class="page-hero">
+    <div class="container">
+        <p class="section-kicker">@lang('messages.experiences')</p>
+        <h1>@lang('messages.experience_title')</h1>
         <p>@lang('messages.experience_intro_1')</p>
         <p>@lang('messages.experience_intro_2')</p>
     </div>
-    <div class="col-md-3 text-center"></div>
-</div>
+</section>
 
-<div class="row row-division row-division-2">
-    <div class="col-md-3"></div>
-    <div class="col-md-6 text-center">
-        <h4 class="text-uppercase">@lang('messages.webcontrol_position')</h4>
-        <h5>@lang('messages.webcontrol_period')</h5>
-        <p class="small-space">@lang('messages.webcontrol_previous_role')</p>
-        <p>@lang('messages.webcontrol_description')</p>
-        <h5>@lang('messages.tech_used')</h5>
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-3 text-left">
-                <p class="light-strong">@lang('messages.backend')</p>
-                <p class="topic">- PHP (5, 7, 8)</p>
-                <p class="light-strong">@lang('messages.database')</p>
-                <p class="topic">- MySQL</p>
-                <p class="light-strong">@lang('messages.system_admin')</p>
-                <p class="topic">@lang('messages.webcontrol_sysadmin_tasks')</p>
+<section class="site-section">
+    <div class="container experience-list">
+        <article class="experience-card experience-card-featured">
+            <div class="experience-header">
+                <div>
+                    <h2>@lang('messages.webcontrol_position')</h2>
+                    <p>@lang('messages.webcontrol_previous_role')</p>
+                </div>
+                <span>@lang('messages.webcontrol_period')</span>
             </div>
-            <div class="col-md-2"></div>
-            <div class="col-md-3 text-left">
-                <p class="light-strong">@lang('messages.frameworks')</p>
-                <p class="topic">- Laravel 7</p>
-                <p class="topic">- Bootstrap (3, 4, 5)</p>
-                <p class="light-strong">@lang('messages.frontend')</p>
-                <p class="topic">- JavaScript</p>
-                <p class="topic">- jQuery</p>
-                <p class="topic">- CSS3</p>
-                <p class="light-strong">@lang('messages.versioning')</p>
-                <p class="topic">- Git</p>
+            <p>@lang('messages.webcontrol_description')</p>
+            <h3>@lang('messages.webcontrol_highlights_title')</h3>
+            <ul class="experience-bullets">
+                <li>@lang('messages.webcontrol_highlight_1')</li>
+                <li>@lang('messages.webcontrol_highlight_2')</li>
+                <li>@lang('messages.webcontrol_highlight_3')</li>
+                <li>@lang('messages.webcontrol_highlight_4')</li>
+                <li>@lang('messages.webcontrol_highlight_5')</li>
+                <li>@lang('messages.webcontrol_highlight_6')</li>
+                <li>@lang('messages.webcontrol_highlight_7')</li>
+            </ul>
+            <h3>@lang('messages.tech_used')</h3>
+            <div class="tech-grid">
+                <div><strong>@lang('messages.backend')</strong><p>@lang('messages.webcontrol_tech_backend')</p></div>
+                <div><strong>@lang('messages.frameworks')</strong><p>@lang('messages.webcontrol_tech_frameworks')</p></div>
+                <div><strong>@lang('messages.integrations')</strong><p>@lang('messages.webcontrol_tech_integrations')</p></div>
+                <div><strong>@lang('messages.database')</strong><p>@lang('messages.webcontrol_tech_database')</p></div>
+                <div><strong>@lang('messages.versioning')</strong><p>@lang('messages.webcontrol_tech_versioning')</p></div>
+                <div><strong>@lang('messages.system_admin')</strong><p>@lang('messages.webcontrol_sysadmin_tasks')</p></div>
             </div>
-            <div class="col-md-2"></div>
-        </div>
-    </div>
-    <div class="col-md-3"></div>
-</div>
+        </article>
 
-<div class="row text-white bg-dark row-division row-division-1">
-    <div class="col-md-3"></div>
-    <div class="col-md-6 text-center">
-        <h4 class="text-uppercase">@lang('messages.omnilink_position')</h4>
-        <h5 class="small-space">@lang('messages.omnilink_period')</h5>
-        <p>@lang('messages.omnilink_description')</p>
-        <h5>@lang('messages.tech_used')</h5>
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-3 text-left">
-                <p class="light-strong">@lang('messages.backend')</p>
-                <p class="topic">- PHP 7</p>
-                <p class="light-strong">@lang('messages.frameworks')</p>
-                <p class="topic">- CodeIgniter</p>
-                <p class="topic">- Bootstrap 3</p>
-                <p class="light-strong">@lang('messages.database')</p>
-                <p class="topic">- MySQL</p>
+        <article class="experience-card">
+            <div class="experience-header">
+                <div>
+                    <h2>@lang('messages.omnilink_position')</h2>
+                </div>
+                <span>@lang('messages.omnilink_period')</span>
             </div>
-            <div class="col-md-2"></div>
-            <div class="col-md-3 text-left">
-                <p class="light-strong">@lang('messages.frontend')</p>
-                <p class="topic">- JavaScript</p>
-                <p class="topic">- jQuery</p>
-                <p class="topic">- CSS3</p>
-                <p class="light-strong">@lang('messages.versioning')</p>
-                <p class="topic">- Git</p>
-                <p class="topic">- Bitbucket</p>
+            <p>@lang('messages.omnilink_description')</p>
+            <h3>@lang('messages.tech_used')</h3>
+            <div class="tech-grid">
+                <div><strong>@lang('messages.backend')</strong><p>PHP 7</p></div>
+                <div><strong>@lang('messages.frameworks')</strong><p>CodeIgniter, Bootstrap 3</p></div>
+                <div><strong>@lang('messages.database')</strong><p>MySQL</p></div>
+                <div><strong>@lang('messages.frontend')</strong><p>JavaScript, jQuery, CSS3</p></div>
+                <div><strong>@lang('messages.versioning')</strong><p>Git, Bitbucket</p></div>
             </div>
-            <div class="col-md-2"></div>
-        </div>
-    </div>
-    <div class="col-md-3"></div>
-</div>
+        </article>
 
-<div class="row row-division row-division-2">
-    <div class="col-md-3"></div>
-    <div class="col-md-6 text-center">
-        <h4 class="text-uppercase">@lang('messages.simplifica_position_jr')</h4>
-        <h5 class="small-space">@lang('messages.simplifica_period_jr')</h5>
-        <h4 class="text-uppercase">@lang('messages.simplifica_position_intern')</h4>
-        <h5 class="small-space">@lang('messages.simplifica_period_intern')</h5>
-        <p>@lang('messages.simplifica_description')</p>
-        <h5>@lang('messages.tech_used')</h5>
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-3 text-left">
-                <p class="light-strong">@lang('messages.backend')</p>
-                <p class="topic">- PHP 7</p>
-                <p class="light-strong">@lang('messages.frameworks')</p>
-                <p class="topic">- CodeIgniter</p>
-                <p class="topic">- Bootstrap 3</p>
-                <p class="light-strong">@lang('messages.database')</p>
-                <p class="topic">- MySQL</p>
+        <article class="experience-card">
+            <div class="experience-header">
+                <div>
+                    <h2>@lang('messages.simplifica_position_jr')</h2>
+                    <p>@lang('messages.simplifica_position_intern')</p>
+                </div>
+                <span>@lang('messages.simplifica_period_jr') / @lang('messages.simplifica_period_intern')</span>
             </div>
-            <div class="col-md-2"></div>
-            <div class="col-md-3 text-left">
-                <p class="light-strong">@lang('messages.frontend')</p>
-                <p class="topic">- JavaScript</p>
-                <p class="topic">- jQuery</p>
-                <p class="topic">- CSS3</p>
-                <p class="light-strong">@lang('messages.versioning')</p>
-                <p class="topic">- Git</p>
+            <p>@lang('messages.simplifica_description')</p>
+            <h3>@lang('messages.tech_used')</h3>
+            <div class="tech-grid">
+                <div><strong>@lang('messages.backend')</strong><p>PHP 7</p></div>
+                <div><strong>@lang('messages.frameworks')</strong><p>CodeIgniter, Bootstrap 3</p></div>
+                <div><strong>@lang('messages.database')</strong><p>MySQL</p></div>
+                <div><strong>@lang('messages.frontend')</strong><p>JavaScript, jQuery, CSS3</p></div>
+                <div><strong>@lang('messages.versioning')</strong><p>Git</p></div>
             </div>
-            <div class="col-md-2"></div>
-        </div>
+        </article>
     </div>
-    <div class="col-md-3"></div>
-</div>
+</section>
+</main>
 
 @include('includes.footer')

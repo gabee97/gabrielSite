@@ -1,65 +1,84 @@
 @include('includes.head')
 @include('includes.header')
 
-<div class="row text-white bg-dark row-division row-division-1">
-    <div class="col-md-3 text-center"></div>
-    <div class="col-md-6 text-center">
-        <p class="h1-higher">@lang('messages.hello')</p>
-        <p>@lang('messages.intro')</p>
+<main>
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+                <p class="section-kicker">@lang('messages.hero_kicker')</p>
+                <h1>@lang('messages.hello')</h1>
+                <p class="hero-lead">@lang('messages.intro')</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="{{ route('experiences') }}"><i class="fas fa-briefcase"></i> @lang('messages.experiences')</a>
+                    <a class="btn btn-outline-light" href="{{ route('contacts') }}"><i class="fas fa-envelope"></i> @lang('messages.contacts')</a>
+                </div>
+            </div>
+            <div class="col-lg-5 text-center">
+                <div class="profile-frame">
+                    <img src="{{ asset('storage/5.jpeg') }}" class="profile-photo" alt="@lang('messages.profile_photo_alt')">
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-3 text-center"></div>
-</div>
-<div class="row row-division row-division-2 align-items-center">
-    <div class="col-md-7 text-center">
-        <small>@lang('messages.first_of_all')...</small>
-        <p class="h1-higher space">@lang('messages.about_me')</p>
-        <p class="space">@lang('messages.about_me_description')</p>
-        <a class="btn btn-dark" href="{{ route('about') }}"><i class="fas fa-angle-right"></i> @lang('messages.know_more') <i class="fas fa-angle-left"></i></a>
+</section>
+
+<section class="site-section">
+    <div class="container">
+        <div class="section-heading text-center">
+            <p class="section-kicker">@lang('messages.first_of_all')</p>
+            <h2>@lang('messages.about_me')</h2>
+            <p>@lang('messages.about_me_description')</p>
+            <a class="btn btn-dark" href="{{ route('about') }}"><i class="fas fa-angle-right"></i> @lang('messages.know_more')</a>
+        </div>
     </div>
-    <div class="col-md-5 img-none-smart text-center">
-        <img src="{{ asset('storage/5.jpeg') }}" class="rounded-circle image-index" alt="Imagem Gabriel">
+</section>
+
+<section class="site-section section-dark">
+    <div class="container">
+        <div class="row g-4 align-items-stretch">
+            <div class="col-lg-6">
+                <div class="feature-panel h-100">
+                    <p class="section-kicker">@lang('messages.not_less_important')</p>
+                    <h2>@lang('messages.skills_upper')</h2>
+                    <p>@lang('messages.skills_description')</p>
+                    <a class="btn btn-outline-light" href="{{ route('skills') }}"><i class="fas fa-code"></i> @lang('messages.know_skills')</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-panel h-100">
+                    <p class="section-kicker">@lang('messages.cant_forget')</p>
+                    <h2>@lang('messages.experiences_upper')</h2>
+                    <p>@lang('messages.experiences_description')</p>
+                    <a class="btn btn-outline-light" href="{{ route('experiences') }}"><i class="fas fa-briefcase"></i> @lang('messages.experiences')</a>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-<div class="row row-division text-white bg-dark align-items-center">
-    <div class="col-md-5 image-code p-0" style="background-image: url('{{ asset('storage/code.png') }}');">
+</section>
+
+<section class="site-section contact-band">
+    <div class="container">
+        <div class="contact-card">
+            <h2>@lang('messages.send_message')</h2>
+            <form class="form-contact" action="{{ route('send.email') }}" method="POST">
+                @csrf
+                <label for="name">@lang('messages.name')</label>
+                <input type="text" name="name" class="form-control" placeholder="@lang('messages.name_placeholder')" id="name" required>
+                <label for="email">@lang('messages.email')</label>
+                <input type="email" name="email" class="form-control" placeholder="@lang('messages.email_placeholder')" id="email" required>
+                <label for="phone">@lang('messages.phone')</label>
+                <input type="text" name="phone" class="form-control" placeholder="@lang('messages.phone_placeholder')" id="phone">
+                <label for="message">@lang('messages.message')</label>
+                <textarea id="message" name="message" class="form-control" placeholder="@lang('messages.message_placeholder')" required></textarea>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-dark"><i class="fas fa-envelope"></i> @lang('messages.send_email')</button>
+                    <button type="button" onclick="sendWhatsAppMessage(this)" class="btn btn-success" data-message-prefix="@lang('messages.whatsapp_message_prefix')"><i class="fab fa-whatsapp"></i> @lang('messages.send_whatsapp')</button>
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="col-md-7 text-center">
-        <small>@lang('messages.not_less_important')...</small>
-        <p class="h1-higher space text-uppercase">@lang('messages.skills_upper')</p>
-        <p>@lang('messages.skills_description')</p>
-        <p>@lang('messages.know_skills')</p>
-    </div>
-</div>
-<div class="row row-division row-division-2 align-items-center">
-    <div class="col-md-7 text-center">
-        <small>@lang('messages.cant_forget')...</small>
-        <p class="h1-higher space text-uppercase">@lang('messages.experiences_upper')</p>
-        <p class="space">@lang('messages.experiences_description')</p>
-        <a class="btn btn-dark" href="{{ route('experiences') }}"><i class="fas fa-briefcase"></i> @lang('messages.experiences') </i></a>
-    </div>
-    <div class="col-md-5 img-none-smart text-center">
-        <img src="{{ asset('storage/computer.jpg') }}" class="rounded-circle image-index" alt="Imagem Computador">
-    </div>
-</div>
-<div class="row text-white bg-dark row-division row-division-1">
-    <div class="col-md-3 text-center"></div>
-    <div class="col-md-6 text-center">
-        <p class="h1-higher">@lang('messages.send_message')</p>
-        <form class="form-inline form-contact" action="{{ route('send.email') }}" method="POST">
-            @csrf
-            <label for="name">@lang('messages.name')</label>
-            <input type="text" class="form-control" placeholder="Digite seu nome" id="name">
-            <label for="email">@lang('messages.email')</label>
-            <input type="email" class="form-control" placeholder="Digite seu email" id="email">
-            <label for="phone">@lang('messages.phone')</label>
-            <input type="text" class="form-control" placeholder="Digite seu telefone" id="phone">
-            <label for="message">@lang('messages.message')</label>
-            <textarea id="message" class="form-control" placeholder="Digite sua mensagem"></textarea>
-            <button type="submit" class="btn btn-secondary"><i class="fas fa-envelope"></i> @lang('messages.send_email')</button>
-            <button type="button" onclick="sendWhatsAppMessage()" class="btn btn-success"><i class="fab fa-whatsapp"></i> @lang('messages.send_whatsapp')</button>
-        </form>
-    </div>
-    <div class="col-md-3 text-center"></div>
-</div>
+</section>
+</main>
 
 @include('includes.footer')
