@@ -22,7 +22,7 @@
             </div>
             <div class="col-lg-5 text-center">
                 <div class="profile-frame profile-frame-small">
-                    <img src="{{ asset('storage/5.jpeg') }}" class="profile-photo" alt="@lang('messages.profile_photo_alt')">
+                    <img src="{{ asset('images/final.jpg') }}" class="profile-photo" alt="@lang('messages.profile_photo_alt')">
                 </div>
             </div>
         </div>
