@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="11" assertions="162" errors="0" warnings="0" failures="0" skipped="0" time="0.370716">
+    <testsuite name="Unit" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.006367">
+      <testsuite name="Tests\Unit\ExampleTest" file="/var/www/html/gabrielSite/Gabriel/tests/Unit/ExampleTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.006367">
+        <testcase name="test_that_true_is_true" class="Tests\Unit\ExampleTest" classname="Tests.Unit.ExampleTest" file="/var/www/html/gabrielSite/Gabriel/tests/Unit/ExampleTest.php" line="14" assertions="1" time="0.006367"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="Feature" tests="10" assertions="161" errors="0" warnings="0" failures="0" skipped="0" time="0.364348">
+      <testsuite name="Tests\Feature\ExampleTest" file="/var/www/html/gabrielSite/Gabriel/tests/Feature/ExampleTest.php" tests="1" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="0.219102">
+        <testcase name="test_the_application_returns_a_successful_response" class="Tests\Feature\ExampleTest" classname="Tests.Feature.ExampleTest" file="/var/www/html/gabrielSite/Gabriel/tests/Feature/ExampleTest.php" line="15" assertions="4" time="0.219102"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\PortfolioTest" file="/var/www/html/gabrielSite/Gabriel/tests/Feature/PortfolioTest.php" tests="9" assertions="157" errors="0" warnings="0" failures="0" skipped="0" time="0.145246">
+        <testcase name="test_public_pages_and_metadata_in_both_languages" class="Tests\Feature\PortfolioTest" classname="Tests.Feature.PortfolioTest" file="/var/www/html/gabrielSite/Gabriel/tests/Feature/PortfolioTest.php" line="17" assertions="87" time="0.035500"/>
+        <testcase name="test_legacy_redirects_and_language_do_not_depend_on_session" class="Tests\Feature\PortfolioTest" classname="Tests.Feature.PortfolioTest" file="/var/www/html/gabrielSite/Gabriel/tests/Feature/PortfolioTest.php" line="33" assertions="21" time="0.011660"/>
+        <testcase name="test_sitemap_contains_only_public_localized_pages" class="Tests\Feature\PortfolioTest" classname="Tests.Feature.PortfolioTest" file="/var/www/html/gabrielSite/Gabriel/tests/Feature/PortfolioTest.php" line="44" assertions="8" time="0.006403"/>
+        <testcase name="test_csrf_is_required_on_contact_posts" class="Tests\Feature\PortfolioTest" classname="Tests.Feature.PortfolioTest" file="/var/www/html/gabrielSite/Gabriel/tests/Feature/PortfolioTest.php" line="53" assertions="4" time="0.033507"/>
+        <testcase name="test_valid_contact_uses_authenticated_sender_and_reply_to" class="Tests\Feature\PortfolioTest" classname="Tests.Feature.PortfolioTest" file="/var/www/html/gabrielSite/Gabriel/tests/Feature/PortfolioTest.php" line="71" assertions="7" time="0.006026"/>
+        <testcase name="test_invalid_contact_preserves_input_and_sends_nothing" class="Tests\Feature\PortfolioTest" classname="Tests.Feature.PortfolioTest" file="/var/www/html/gabrielSite/Gabriel/tests/Feature/PortfolioTest.php" line="85" assertions="7" time="0.008033"/>
+        <testcase name="test_honeypot_and_required_fields_prevent_delivery" class="Tests\Feature\PortfolioTest" classname="Tests.Feature.PortfolioTest" file="/var/www/html/gabrielSite/Gabriel/tests/Feature/PortfolioTest.php" line="97" assertions="7" time="0.006592"/>
+        <testcase name="test_delivery_failure_has_safe_feedback_and_preserves_input" class="Tests\Feature\PortfolioTest" classname="Tests.Feature.PortfolioTest" file="/var/www/html/gabrielSite/Gabriel/tests/Feature/PortfolioTest.php" line="105" assertions="7" time="0.025418"/>
+        <testcase name="test_rate_limit_covers_all_contact_routes" class="Tests\Feature\PortfolioTest" classname="Tests.Feature.PortfolioTest" file="/var/www/html/gabrielSite/Gabriel/tests/Feature/PortfolioTest.php" line="112" assertions="9" time="0.012107"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

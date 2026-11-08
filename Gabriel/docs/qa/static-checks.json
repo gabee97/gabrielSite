@@ -1,0 +1,19 @@
+{
+  "method": "WCAG relative luminance calculation, static declared colors only; not a rendered-page audit",
+  "whatsapp_before_on_white": 4.14,
+  "whatsapp_after_on_white": 5.59,
+  "muted_on_white": 5.59,
+  "accent_on_white": 5.17,
+  "portrait": {
+    "original_bytes": 562086,
+    "webp_bytes": 26496,
+    "original_dimensions": [
+      922,
+      1152
+    ],
+    "webp_dimensions": [
+      720,
+      900
+    ]
+  }
+}

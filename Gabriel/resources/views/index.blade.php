@@ -1,84 +1,37 @@
 @include('includes.head')
 @include('includes.header')
-
-<main>
-<section class="hero-section">
-    <div class="container">
-        <div class="row align-items-center g-5">
-            <div class="col-lg-7">
-                <p class="section-kicker">@lang('messages.hero_kicker')</p>
-                <h1>@lang('messages.hello')</h1>
-                <p class="hero-lead">@lang('messages.intro')</p>
-                <div class="hero-actions">
-                    <a class="btn btn-primary" href="{{ route('experiences') }}"><i class="fas fa-briefcase"></i> @lang('messages.experiences')</a>
-                    <a class="btn btn-outline-light" href="{{ route('contacts') }}"><i class="fas fa-envelope"></i> @lang('messages.contacts')</a>
-                </div>
-            </div>
-            <div class="col-lg-5 text-center">
-                <div class="profile-frame">
-                    <img src="{{ asset('images/final.jpg') }}" class="profile-photo" alt="@lang('messages.profile_photo_alt')">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="site-section">
-    <div class="container">
-        <div class="section-heading text-center">
-            <p class="section-kicker">@lang('messages.first_of_all')</p>
-            <h2>@lang('messages.about_me')</h2>
-            <p>@lang('messages.about_me_description')</p>
-            <a class="btn btn-dark" href="{{ route('about') }}"><i class="fas fa-angle-right"></i> @lang('messages.know_more')</a>
-        </div>
-    </div>
-</section>
-
-<section class="site-section section-dark">
-    <div class="container">
-        <div class="row g-4 align-items-stretch">
-            <div class="col-lg-6">
-                <div class="feature-panel h-100">
-                    <p class="section-kicker">@lang('messages.not_less_important')</p>
-                    <h2>@lang('messages.skills_upper')</h2>
-                    <p>@lang('messages.skills_description')</p>
-                    <a class="btn btn-outline-light" href="{{ route('skills') }}"><i class="fas fa-code"></i> @lang('messages.know_skills')</a>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="feature-panel h-100">
-                    <p class="section-kicker">@lang('messages.cant_forget')</p>
-                    <h2>@lang('messages.experiences_upper')</h2>
-                    <p>@lang('messages.experiences_description')</p>
-                    <a class="btn btn-outline-light" href="{{ route('experiences') }}"><i class="fas fa-briefcase"></i> @lang('messages.experiences')</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="site-section contact-band">
-    <div class="container">
-        <div class="contact-card">
-            <h2>@lang('messages.send_message')</h2>
-            <form class="form-contact" action="{{ route('send.email') }}" method="POST">
-                @csrf
-                <label for="name">@lang('messages.name')</label>
-                <input type="text" name="name" class="form-control" placeholder="@lang('messages.name_placeholder')" id="name" required>
-                <label for="email">@lang('messages.email')</label>
-                <input type="email" name="email" class="form-control" placeholder="@lang('messages.email_placeholder')" id="email" required>
-                <label for="phone">@lang('messages.phone')</label>
-                <input type="text" name="phone" class="form-control" placeholder="@lang('messages.phone_placeholder')" id="phone">
-                <label for="message">@lang('messages.message')</label>
-                <textarea id="message" name="message" class="form-control" placeholder="@lang('messages.message_placeholder')" required></textarea>
-                <div class="form-actions">
-                    <button type="submit" class="btn btn-dark"><i class="fas fa-envelope"></i> @lang('messages.send_email')</button>
-                    <button type="button" onclick="sendWhatsAppMessage(this)" class="btn btn-success" data-message-prefix="@lang('messages.whatsapp_message_prefix')"><i class="fab fa-whatsapp"></i> @lang('messages.send_whatsapp')</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
+<main id="main-content">
+<section class="hero-section"><div class="container"><div class="row align-items-center g-4">
+<div class="col-lg-7">
+<p class="section-kicker">PHP &amp; Laravel</p><h1>Gabriel Oliveira</h1>
+<p class="hero-role">@lang('portfolio.role')</p><p>@lang('portfolio.specialties')</p>
+<p class="hero-lead">@lang('portfolio.intro')</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#projects">@lang('portfolio.view_projects')</a>
+@php($resumeFilename = 'Gabriel Oliveira de Paula - '.(app()->getLocale() === 'en' ? 'EN' : 'PT').'.pdf')
+<a class="btn btn-outline-light" href="{{ asset('files/'.rawurlencode($resumeFilename)) }}" download="{{ $resumeFilename }}"><i class="fas fa-download" aria-hidden="true"></i> @lang('portfolio.resume')</a>
+<a class="btn btn-outline-light" href="https://www.linkedin.com/in/gabriel-oliveira-gop1997/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a class="btn btn-outline-light" href="https://github.com/gabee97" target="_blank" rel="noopener noreferrer">GitHub</a>
+</div></div>
+<div class="col-lg-5 text-center"><div class="profile-frame">
+<picture class="profile-picture"><source srcset="{{ asset('images/final.webp') }}" type="image/webp"><img src="{{ asset('images/final.jpg') }}" class="profile-photo" alt="@lang('messages.profile_photo_alt')" width="922" height="1152" fetchpriority="high"></picture>
+</div></div>
+</div></div></section>
+<section class="site-section"><div class="container"><h2>@lang('portfolio.skills')</h2>
+@include('includes.core-skills')
+<a class="btn btn-outline-dark mt-4" href="{{ route('skills') }}">@lang('messages.know_skills')</a>
+</div></section>
+@include('includes.projects')
+<section class="site-section section-dark"><div class="container"><h2>@lang('portfolio.experience')</h2>
+<p>@lang('portfolio.experience_summary')</p>
+<a class="btn btn-outline-light" href="{{ route('experiences') }}">@lang('messages.experiences')</a>
+</div></section>
+<section class="site-section"><div class="container"><h2>@lang('portfolio.education')</h2>
+<p>@lang('messages.education_degree_details')</p><p>@lang('messages.education_post_details')</p>
+<a class="btn btn-outline-dark" href="{{ route('about') }}">@lang('messages.about_title')</a>
+</div></section>
+<section id="contact" class="site-section contact-band"><div class="container"><div class="contact-card">
+<h2>@lang('portfolio.contact')</h2>@include('includes.contact-form')
+</div></div></section>
 </main>
-
 @include('includes.footer')

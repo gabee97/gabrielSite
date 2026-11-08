@@ -7,4 +7,4 @@
 @endif
 
 <p><strong>@lang('messages.message')</strong></p>
-<p>{{ $message }}</p>
+<p>{{ $contactMessage }}</p>

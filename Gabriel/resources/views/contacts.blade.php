@@ -1,7 +1,7 @@
 @include('includes.head')
 @include('includes.header')
 
-<main>
+<main id="main-content">
 <section class="page-hero">
     <div class="container">
         <p class="section-kicker">@lang('messages.contacts')</p>
@@ -12,29 +12,7 @@
 <section class="site-section">
     <div class="container">
         <div class="contact-card">
-            <form class="form-contact" action="{{ route('send.email') }}" method="POST">
-                @csrf
-                <label for="name">@lang('messages.name')</label>
-                <input type="text" name="name" class="form-control" placeholder="@lang('messages.name_placeholder')" id="name" required>
-            
-                <label for="email">@lang('messages.email')</label>
-                <input type="email" name="email" class="form-control" placeholder="@lang('messages.email_placeholder')" id="email" required>
-            
-                <label for="phone">@lang('messages.phone')</label>
-                <input type="text" name="phone" class="form-control" placeholder="@lang('messages.phone_placeholder')" id="phone">
-            
-                <label for="message">@lang('messages.message')</label>
-                <textarea id="message" name="message" class="form-control" placeholder="@lang('messages.message_placeholder')" required></textarea>
-            
-                <div class="form-actions">
-                    <button type="submit" class="btn btn-dark">
-                        <i class="fas fa-envelope"></i> @lang('messages.send_email')
-                    </button>
-                    <button type="button" onclick="sendWhatsAppMessage(this)" class="btn btn-success" data-message-prefix="@lang('messages.whatsapp_message_prefix')">
-                        <i class="fab fa-whatsapp"></i> @lang('messages.send_whatsapp')
-                    </button>
-                </div>
-            </form>
+            @include('includes.contact-form')
         </div>
     </div>
 </section>
@@ -48,7 +26,7 @@
                 </a>
             </div>
             <div class="col-sm-12 col-md-4">
-                <a class="social-card whatsapp" href="https://wa.me/+5541987694868?text=@lang('messages.contact_whatsapp_prefill')" target="_blank" rel="noopener noreferrer">
+                <a class="social-card whatsapp" href="https://wa.me/5541987694868?text=@lang('messages.contact_whatsapp_prefill')" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-whatsapp"></i> @lang('messages.contact_whatsapp')
                 </a>
             </div>

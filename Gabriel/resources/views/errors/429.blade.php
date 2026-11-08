@@ -1,0 +1,3 @@
+<!doctype html>
+<html lang="{{ app()->getLocale() === 'en' ? 'en' : 'pt-BR' }}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>429 · Gabriel Oliveira</title></head>
+<body><main><h1>{{ app()->getLocale() === 'en' ? 'Too many attempts' : 'Muitas tentativas' }}</h1><p>{{ app()->getLocale() === 'en' ? 'Please wait one minute before sending another message.' : 'Aguarde um minuto antes de enviar outra mensagem.' }}</p><a href="{{ route('contacts') }}">{{ app()->getLocale() === 'en' ? 'Back to contact' : 'Voltar ao contato' }}</a></main></body></html>

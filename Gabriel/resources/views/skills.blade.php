@@ -1,7 +1,7 @@
 @include('includes.head')
 @include('includes.header')
 
-<main>
+<main id="main-content">
 <section class="page-hero">
     <div class="container">
         <p class="section-kicker">@lang('messages.skills')</p>
@@ -9,6 +9,10 @@
         <p>@lang('messages.skills_intro')</p>
     </div>
 </section>
+
+<section class="site-section"><div class="container"><h2>@lang('portfolio.skills')</h2>
+@include('includes.core-skills')
+</div></section>
 
 <section class="site-section">
     <div class="container skills-grid">

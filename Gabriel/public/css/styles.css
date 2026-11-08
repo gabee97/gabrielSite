@@ -15,7 +15,6 @@
 }
 
 body {
-    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -60,20 +59,11 @@ a {
     color: #ffffff;
 }
 
-.nav-social .nav-link {
-    font-size: 1.1rem;
-}
-
 .language-switcher {
     display: flex;
     align-items: center;
     gap: 0.15rem;
     margin-left: 0.5rem;
-}
-
-.language-switcher img {
-    border-radius: 3px;
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18);
 }
 
 .hero-section {
@@ -399,7 +389,7 @@ a {
 }
 
 .whatsapp {
-    color: #128c7e;
+    color: #087568;
 }
 
 .instagram {
@@ -433,51 +423,6 @@ a {
 
 .footer a:hover {
     color: #93c5fd !important;
-}
-
-.row-division {
-    padding: 50px;
-}
-
-.row-division-2 {
-    border-bottom: 1px solid var(--color-border);
-    background-color: var(--color-soft);
-}
-
-.space {
-    margin-bottom: 70px;
-}
-
-.small-space {
-    margin-bottom: 40px;
-}
-
-.h1-higher {
-    font-size: 40px;
-    font-weight: 800;
-}
-
-.image-index {
-    width: 60%;
-}
-
-.image-code {
-    min-height: 300px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.text-left {
-    text-align: left;
-}
-
-.light-strong {
-    font-weight: 700;
-}
-
-.topic {
-    padding-left: 10px;
 }
 
 @media (max-width: 991.98px) {
@@ -537,3 +482,36 @@ a {
         display: none;
     }
 }
+
+/* Content must fit without hiding overflow. */
+main, .row > *, .experience-header > *, .skill-section { min-width: 0; }
+body { overflow-wrap: break-word; }
+.experience-header span { flex-shrink: 1; max-width: 100%; }
+.navbar-brand { font-size: clamp(.95rem, 3.5vw, 1.25rem); white-space: normal; max-width: calc(100% - 64px); }
+.hero-role { font-size: clamp(1.35rem, 3vw, 2rem); font-weight: 700; line-height: 1.25; }
+.hero-section { padding: clamp(2.5rem, 5vw, 5rem) 0; }
+.hero-section h1 { font-size: clamp(2.2rem, 4.6vw, 4rem); }
+.nav-link, .footer-links a { min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; }
+:focus-visible { outline: 3px solid #d97706; outline-offset: 4px; }
+.skip-link { position: fixed; top: -100px; left: 1rem; padding: .75rem; background: white; color: #17202a; z-index: 2000; }
+.skip-link:focus { top: 1rem; }
+.honeypot { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+section[id] { scroll-margin-top: 6rem; }
+.skill-section h3 { margin-top: 0; font-size: 1.15rem; }
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+@media print {
+    .site-navbar, .footer, .skip-link, .print-action { display: none !important; }
+    body, .site-section { background: white; color: black; }
+    .site-section { padding: 0; }
+    .container { max-width: none; width: 100%; }
+    .experience-card, .skill-section { box-shadow: none; border: 0; padding: .5rem 0; }
+    h2, h3 { break-after: avoid; }
+    .tech-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    a { color: black; text-decoration: underline; }
+}
+
+.profile-picture { display: block; width: 100%; height: 100%; }
+/* Keep large vertical gutters without expanding rows beyond their container. */
+.container > .row { --bs-gutter-x: 1.5rem; }

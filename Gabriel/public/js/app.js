@@ -1,10 +1,20 @@
 function sendWhatsAppMessage(trigger) {
-    const message = document.getElementById('message').value.trim();
-    const name = document.getElementById('name').value.trim();
-    const prefix = trigger && trigger.dataset.messagePrefix ? trigger.dataset.messagePrefix : 'Me chamo';
-
-    const completeMessage = `${prefix} ${name}, ${message}`;
-    const url = 'https://api.whatsapp.com/send?phone=5541987694868&text=' + encodeURIComponent(completeMessage);
-
-    window.open(url, '_blank', 'noopener,noreferrer');
+    const form = trigger.closest('form');
+    const name = form.elements.name;
+    const message = form.elements.message;
+    if (!name.reportValidity() || !message.reportValidity()) return;
+    const text = `${trigger.dataset.messagePrefix} ${name.value.trim()}, ${message.value.trim()}`;
+    window.open('https://wa.me/5541987694868?text=' + encodeURIComponent(text), '_blank', 'noopener,noreferrer');
 }
+document.querySelectorAll('.form-contact').forEach(form => {
+    form.addEventListener('submit', () => {
+        form.querySelector('[type="submit"]').disabled = true;
+        form.querySelector('.form-status').textContent = form.dataset.loading;
+        form.setAttribute('aria-busy', 'true');
+    });
+});
+window.addEventListener('pageshow', () => document.querySelectorAll('.form-contact').forEach(form => {
+    form.querySelector('[type="submit"]').disabled = false;
+    form.removeAttribute('aria-busy');
+    form.querySelector('.form-status').textContent = '';
+}));

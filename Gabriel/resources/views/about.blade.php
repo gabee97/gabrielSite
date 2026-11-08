@@ -1,7 +1,7 @@
 @include('includes.head')
 @include('includes.header')
 
-<main>
+<main id="main-content">
 <section class="page-hero">
     <div class="container">
         <p class="section-kicker">@lang('messages.about')</p>
@@ -22,7 +22,7 @@
             </div>
             <div class="col-lg-5 text-center">
                 <div class="profile-frame profile-frame-small">
-                    <img src="{{ asset('images/final.jpg') }}" class="profile-photo" alt="@lang('messages.profile_photo_alt')">
+                    <picture class="profile-picture"><source srcset="{{ asset('images/final.webp') }}" type="image/webp"><img src="{{ asset('images/final.jpg') }}" loading="lazy" decoding="async" class="profile-photo" width="922" height="1152" alt="@lang('messages.profile_photo_alt')"></picture>
                 </div>
             </div>
         </div>
